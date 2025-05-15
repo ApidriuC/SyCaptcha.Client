@@ -2,7 +2,9 @@
 
 **SyCaptcha** es un componente de captcha altamente seguro y fácil de usar, desarrollado para **Sistemas y Computadores S.A**. Diseñado para integrarse con formularios web, protege contra el abuso, el spam y los envíos automatizados, validando que el usuario sea realmente humano mediante desafíos visuales e interactivos.
 
-<img src="https://github.com/ApidriuC/SyCaptcha.Client/blob/main/sycaptcha.client/src/sycaptcha/assets/images/SyCaptcha.React.Challenge.Simple.jpg" alt="componente" />
+<div align="center">
+  <img src="https://github.com/ApidriuC/SyCaptcha.Client/blob/main/sycaptcha.client/src/sycaptcha/assets/images/SyCaptcha.React.Challenge.Simple.jpg" alt="componente" />
+</div>
 
 ## 🚀 Características principales
 
@@ -33,7 +35,9 @@ Además de la imagen, SyCaptcha evalúa la interacción del usuario con el compo
 - **Clics, levantamientos del botón del ratón, zoom, etc.**
 - Estos patrones se validan contra **rangos dinámicos definidos por la dificultad**, lo que ayuda a garantizar una verificación genuina.
 
-<img src="https://github.com/ApidriuC/SyCaptcha.Client/blob/main/sycaptcha.client/src/sycaptcha/assets/images/SyCaptcha.React.Challenge.Time.png" alt="componente" />
+<div align="center">
+  <img src="https://github.com/ApidriuC/SyCaptcha.Client/blob/main/sycaptcha.client/src/sycaptcha/assets/images/SyCaptcha.React.Challenge.Time.png" alt="componente" />
+</div>
 
 ### ⏳ Tiempo de expiración
 
