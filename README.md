@@ -35,14 +35,14 @@ Además de la imagen, SyCaptcha evalúa la interacción del usuario con el compo
 - **Clics, levantamientos del botón del ratón, zoom, etc.**
 - Estos patrones se validan contra **rangos dinámicos definidos por la dificultad**, lo que ayuda a garantizar una verificación genuina.
 
-<div align="center">
-  <img src="https://github.com/ApidriuC/SyCaptcha.Client/blob/main/sycaptcha.client/src/sycaptcha/assets/images/SyCaptcha.React.Challenge.Time.png" alt="componente" />
-</div>
-
 ### ⏳ Tiempo de expiración
 
 - Cada intento de captcha tiene un **tiempo de caducidad configurable**, que asegura que la validación sea reciente.
 - Esto previene el uso de imágenes guardadas o manipuladas por bots.
+
+<div align="center">
+  <img src="https://github.com/ApidriuC/SyCaptcha.Client/blob/main/sycaptcha.client/src/sycaptcha/assets/images/SyCaptcha.React.Challenge.Time.png" alt="componente" width="50%"/>
+</div>
 
 ## ⚙️ Personalización
 
