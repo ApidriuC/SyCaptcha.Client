@@ -49,10 +49,14 @@ SyCaptcha permite ajustar fácilmente:
 
 ```bash
 # Ejemplo de instalación si se publica por npm:
+
 npm install sycaptcha-client@latest
 ```
 
-
 ## 🏢 Créditos
 
-Este componente fue desarrollado por Andrés Felipe Londoño Campos para la empresa Sistemas y Computadores S.A, como parte de un ecosistema de soluciones antifraude y validación de usuarios en aplicaciones web modernas.
+Este componente fue desarrollado por Andrés Felipe Londoño Campos para la empresa **Sistemas y Computadores S.A**, como parte de un ecosistema de soluciones antifraude y validación de usuarios en aplicaciones web modernas.
+
+Este software es propiedad de **Sistemas y Computadores S.A**. Todos los derechos reservados. Queda prohibida la copia, distribución, modificación o uso del código fuente total o parcial sin autorización expresa por escrito del titular.
+
+© Sistemas y Computadores S.A - 2025
