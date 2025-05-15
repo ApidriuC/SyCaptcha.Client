@@ -1,0 +1,74 @@
+{
+  "name": "sycaptcha-component",
+  "description": "Componente SyCaptcha",
+  "author": "SYC - Núcleo de Desarrollo e Ingeniería",
+  "version": "1.0.7",
+  "type": "module",
+  "private": false,
+  "keywords": [
+    "react",
+    "typescript",
+    "captcha",
+    "sycaptcha"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev:test": "vite --config vite.config.js",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "build:js": "vite build --config vite.config.lib.ts",
+    "build:types": "tsc --project tsconfig.build.json",
+    "build:lib": "npm run build:js && npm run build:types"
+  },
+  "dependencies": {
+    "framer-motion": ">=12.9.4",
+    "react-spinners": ">=0.17.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^22.15.17",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "globals": "^16.0.0",
+    "jsdoc": "^4.0.4",
+    "jsdom": "^26.0.0",
+    "rollup": "^4.36.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vite-plugin-static-copy": "^2.3.1",
+    "vitest": "^3.0.9"
+  }
+}

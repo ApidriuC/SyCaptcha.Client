@@ -1,0 +1,85 @@
+.component_syc_captcha {
+    width: clamp(90vw, 15vw, 400px);
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: #f5f5f5;
+    color: var(--sycaptcha-color-text-default);
+    border: 1px solid var(--sycaptcha-color-gray);
+    -webkit-box-shadow: var(--sycaptcha-shadow-box);
+    -moz-box-shadow: var(--sycaptcha-shadow-box);
+    box-shadow: var(--sycaptcha-shadow-box);
+}
+
+.component_syc_captcha .captcha_checkbox {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.component_syc_captcha .captcha_checkbox .bg_checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid var(--sycaptcha-color-gray);
+    border-radius: 3px;
+    padding: 0;
+    outline: none;
+
+    &.success {
+        background-image: var(--sycaptcha-img-check-success);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 32px;
+    }
+
+    &.expired {
+        border-color: red;
+    }
+}
+
+.component_syc_captcha .captcha_checkbox span {
+    padding-left: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--sycaptcha-color-black-soft);
+}
+
+.component_syc_captcha .container_logo {
+    width: auto;
+    height: auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+    & img {
+        object-position: center;
+        object-fit: contain;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.component_syc_captcha .container_expired {
+    width: 100%;
+    color: red;
+    padding: 0 5px;
+    font-size: 11px;
+    height: auto;
+    display: grid;
+    place-items: center;
+    line-height: 14px;
+
+    & p {
+        margin: 0;
+    }
+}

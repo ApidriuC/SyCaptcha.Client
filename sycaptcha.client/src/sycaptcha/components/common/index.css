@@ -1,0 +1,21 @@
+.loading-spinner-container {
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+    background-color: #ccccccb0;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.loading-spinner-container .loading-spinner {
+    position: absolute !important;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+
+    & * {
+        background-color: var(--sycaptcha-color-black-soft) !important;
+    }
+}

@@ -1,0 +1,274 @@
+:root {
+    /* FUENTES */
+    --sycaptcha-font-text: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    /* COLORES */
+    --sycaptcha-color-gray: rgba(107, 107, 107, 0.504);
+    --sycaptcha-color-black-soft: #272b34;
+
+    /* SOMBRAS */
+    --sycaptcha-shadow-box: 3px 5px 5px -1px rgba(107, 107, 107, 0.504);
+
+    /* TAMAÑOS */
+    --sycaptcha-size-text-big: 4rem;
+    --sycaptcha-size-text-small: 1rem;
+    --sycaptcha-size-text-default: 1.5rem;
+
+    /* ANIMACIONES */
+    --sycaptcha-animate-duration: .5s;
+    --sycaptcha-animate-delay: .5s;
+    --sycaptcha-animate-repeat: .5;
+    --sycaptcha-transition-ease: all .3s ease;
+    --sycaptcha-transition-slow: all .7s ease;
+    --sycaptcha-transform-w-h: translate(-50%, -50%);
+    --sycaptcha-filter-white: invert(100%) brightness(1000%);
+
+    /* IMAGENES */
+    --sycaptcha-img-close: url('../assets/images/icon-close.webp');
+    --sycaptcha-img-refresh: url('../assets/images/icon-refresh.webp');
+    --sycaptcha-img-check-success: url('../assets/images/check-success.webp');
+}
+
+@keyframes syCaptchaFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes syCaptchaFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes syCaptchaFadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes syCaptchaFadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes syCaptchaErrorXMark {
+    0% {
+        margin-top: 1.625em;
+        transform: scale(0.4);
+        opacity: 0
+    }
+
+    50% {
+        margin-top: 1.625em;
+        transform: scale(0.4);
+        opacity: 0
+    }
+
+    80% {
+        margin-top: -0.375em;
+        transform: scale(1.15)
+    }
+
+    100% {
+        margin-top: 0;
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes syCaptchaErrorXIcon {
+    0% {
+        transform: rotateX(100deg);
+        opacity: 0
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1
+    }
+}
+
+.dialog_challenge_images *,
+.user_alert_popup_sycaptcha *,
+.component_syc_captcha * {
+    font-family: var(--sycaptcha-font-text);
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar-thumb {
+        height: 20px;
+        border-radius: 10px;
+        background-color: gray;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+.dialog_challenge_images.animate__animated,
+.dialog_challenge_images .animate__animated,
+.user_alert_popup_sycaptcha.animate__animated,
+.user_alert_popup_sycaptcha .animate__animated,
+.component_syc_captcha.animate__animated,
+.component_syc_captcha .animate__animated {
+    animation-duration: var(--sycaptcha-animate-duration);
+    -webkit-animation-duration: var(--sycaptcha-animate-duration);
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+
+    &.animate__fadeIn {
+        animation-name: syCaptchaFadeIn;
+        -webkit-animation-name: syCaptchaFadeIn;
+    }
+
+    & *.animate__fadeIn {
+        animation-name: syCaptchaFadeIn;
+        -webkit-animation-name: syCaptchaFadeIn;
+    }
+
+    &.animate__fadeOut {
+        animation-name: syCaptchaFadeOut;
+        -webkit-animation-name: syCaptchaFadeOut;
+    }
+
+    & *.animate__fadeOut {
+        animation-name: syCaptchaFadeOut;
+        -webkit-animation-name: syCaptchaFadeOut;
+    }
+}
+
+.user_alert_popup_sycaptcha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    z-index: 99;
+
+    & * {
+        color: #545454;
+        box-sizing: border-box;
+        font-family: var(--sycaptcha-font-text) !important;
+    }
+}
+
+.user_alert_popup_sycaptcha .us_dialog {
+    position: absolute;
+    display: block;
+    top: 35%;
+    left: 50%;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 32em;
+    outline: none;
+    background-color: white;
+    box-shadow: var(--sycaptcha-shadow-box);
+    transform: var(--sycaptcha-transform-w-h);
+}
+
+.user_alert_popup_sycaptcha .us_dialog header .icon_mark {
+    position: relative;
+    color: #f27474;
+    border-color: #f27474;
+    border: 0.25em solid;
+    border-radius: 50%;
+    line-height: 5em;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    margin: 1.5em auto .6em;
+    user-select: none;
+    box-sizing: content-box;
+    animation: syCaptchaErrorXIcon .5s;
+}
+
+.user_alert_popup_sycaptcha .us_dialog header .icon_mark .x-mark {
+    width: 100%;
+    height: 100%;
+    animation: syCaptchaErrorXMark .5s;
+
+    & span {
+        display: block;
+        position: absolute;
+        top: 2.3em;
+        width: 3em;
+        height: .3em;
+        border-radius: .125em;
+        background-color: #f27474;
+    }
+
+    & .x-mark-line-left {
+        left: 1.0625em;
+        transform: rotate(45deg);
+    }
+
+    & .x-mark-line-right {
+        right: 1em;
+        transform: rotate(-45deg);
+    }
+}
+
+.user_alert_popup_sycaptcha .us_dialog header h2 {
+    padding: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.875em;
+}
+
+.user_alert_popup_sycaptcha .us_dialog .us_body_sycaptcha .us_message_sycaptcha {
+    text-align: center;
+    font-size: 1.125em;
+    padding: 0 5px;
+}
+
+.user_alert_popup_sycaptcha .us_dialog footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 5px;
+}
+
+.user_alert_popup_sycaptcha .us_dialog footer .us_alert_button {
+    color: white;
+    border-radius: 30px;
+    padding: 7px 35px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--sycaptcha-transition-ease);
+    border: 1px solid var(--sycaptcha-color-black-soft);
+    background-color: var(--sycaptcha-color-black-soft);
+
+    &:hover {
+        background-color: white;
+        color: var(--sycaptcha-color-black-soft);
+    }
+}

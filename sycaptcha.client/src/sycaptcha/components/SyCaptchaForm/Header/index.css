@@ -1,0 +1,63 @@
+.dialog_challenge_images .button_close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    background-color: transparent;
+    background-image: var(--sycaptcha-img-close);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    filter: var(--sycaptcha-filter-white);
+    transition: var(--sycaptcha-transition-ease);
+    padding: 0;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: white;
+        filter: none;
+    }
+}
+
+.dialog_challenge_images header {
+    width: 100%;
+    padding: 15px 25px;
+    background-color: var(--sycaptcha-color-black-soft);
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog_challenge_images header h2 {
+    margin: 0;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.dialog_challenge_images header .proccess_message {
+    &.danger {
+        color: red;
+    }
+
+    &.warning {
+        color: orange;
+    }
+}
+
+.dialog_challenge_images .proccess_message * {
+    font-size: var(--sycaptcha-size-text-small);
+
+    &.error {
+        color: red;
+    }
+
+    &.incomplete {
+        color: #ffbc42;
+    }
+}

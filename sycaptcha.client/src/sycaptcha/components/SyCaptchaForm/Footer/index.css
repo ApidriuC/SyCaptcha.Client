@@ -1,0 +1,70 @@
+.dialog_challenge_images footer {
+    border-top: 1px solid var(--sycaptcha-color-black-soft);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog_challenge_images footer .button_continue {
+    background-color: var(--sycaptcha-color-black-soft);
+    color: white;
+    border-radius: 30px;
+    padding: 7px 35px;
+    border: 1px solid var(--sycaptcha-color-black-soft);
+    cursor: pointer;
+    transition: var(--sycaptcha-transition-ease);
+    font-size: 16px;
+
+    &:hover {
+        background-color: white;
+        color: var(--sycaptcha-color-black-soft);
+        transform: translate(2px, -2px);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        transform: none !important;
+        color: white !important;
+        background-color: var(--sycaptcha-color-black-soft) !important;
+        cursor: not-allowed;
+    }
+}
+
+.dialog_challenge_images footer .button_refresh {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-image: var(--sycaptcha-img-refresh);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--sycaptcha-transition-slow);
+    outline: none !important;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        transform: none !important;
+        cursor: not-allowed;
+    }
+}
+
+.dialog_challenge_images footer .label_refresh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    & span {
+        font-size: 12px;
+        font-style: italic;
+        color: var(--sycaptcha-color-black-soft);
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src/sycaptcha",
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+        "paths": {
+            "@": [
+                "./"
+            ],
+            "@/*": [
+                "./*"
+            ],
+            "@components": [
+                "components"
+            ],
+            "@/components/*": [
+                "components/*"
+            ],
+            "@hooks": [
+                "hooks"
+            ],
+            "@/hooks/*": [
+                "hooks/*"
+            ],
+            "@contexts": [
+                "contexts"
+            ],
+            "@/contexts/*": [
+                "contexts/*"
+            ],
+            "@helpers": [
+                "helpers"
+            ],
+            "@/helpers/*": [
+                "helpers/*"
+            ],
+            "@constants": [
+                "constants"
+            ],
+            "@/constants/*": [
+                "constants/*"
+            ],
+            "@types": [
+                "types"
+            ],
+            "@/types/*": [
+                "types/*"
+            ],
+            "@assets": [
+                "assets"
+            ],
+            "@/assets/*": [
+                "assets/*"
+            ],
+        }
+    },
+    "include": [
+        "src"
+    ]
+}

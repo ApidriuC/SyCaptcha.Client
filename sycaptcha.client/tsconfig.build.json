@@ -1,0 +1,77 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": "src/sycaptcha",
+        "rootDir": "src/sycaptcha",
+        "outDir": "dist",
+        "declaration": true,
+        "declarationMap": false,
+        "emitDeclarationOnly": false,
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "Node",
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "paths": {
+            "@": [
+                "./"
+            ],
+            "@/*": [
+                "./*"
+            ],
+            "@components": [
+                "components"
+            ],
+            "@/components/*": [
+                "components/*"
+            ],
+            "@hooks": [
+                "hooks"
+            ],
+            "@/hooks/*": [
+                "hooks/*"
+            ],
+            "@contexts": [
+                "contexts"
+            ],
+            "@/contexts/*": [
+                "contexts/*"
+            ],
+            "@helpers": [
+                "helpers"
+            ],
+            "@/helpers/*": [
+                "helpers/*"
+            ],
+            "@constants": [
+                "constants"
+            ],
+            "@/constants/*": [
+                "constants/*"
+            ],
+            "@types": [
+                "types"
+            ],
+            "@/types/*": [
+                "types/*"
+            ],
+            "@assets": [
+                "assets"
+            ],
+            "@/assets/*": [
+                "assets/*"
+            ],
+        }
+    },
+    "include": [
+        "src/sycaptcha"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.test.ts",
+        "**/*.test.tsx"
+    ]
+}
