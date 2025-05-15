@@ -53,7 +53,7 @@ SyCaptcha permite ajustar fácilmente:
 npm install sycaptcha-client@latest
 ```
 
-## 🏢 Créditos
+## 🏢 Licencia
 
 Este componente fue desarrollado por Andrés Felipe Londoño Campos para la empresa **Sistemas y Computadores S.A**, como parte de un ecosistema de soluciones antifraude y validación de usuarios en aplicaciones web modernas.
 
